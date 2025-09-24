@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Product Showcase</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🛍️ E-Commerce Product Showcase</h1>
+    <p>Highlight your products clearly & attractively</p>
+  </header>
+
+  <!-- Filter Buttons -->
+  <div class="filters">
+    <button class="active" onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('clothing')">Clothing</button>
+    <button onclick="filterProducts('electronics')">Electronics</button>
+    <button onclick="filterProducts('accessories')">Accessories</button>
+  </div>
+
+  <!-- Product Gallery -->
+  <div class="gallery">
+    <div class="product clothing" onclick="openModal(this)">
+      <img src="https://via.placeholder.com/250x180?text=T-Shirt" alt="T-Shirt">
+      <h3>Casual T-Shirt</h3>
+      <p>$15</p>
+    </div>
+    <div class="product electronics" onclick="openModal(this)">
+      <img src="https://via.placeholder.com/250x180?text=Headphones" alt="Headphones">
+      <h3>Wireless Headphones</h3>
+      <p>$45</p>
+    </div>
+    <div class="product accessories" onclick="openModal(this)">
+      <img src="https://via.placeholder.com/250x180?text=Watch" alt="Watch">
+      <h3>Stylish Watch</h3>
+      <p>$30</p>
+    </div>
+    <div class="product clothing" onclick="openModal(this)">
+      <img src="https://via.placeholder.com/250x180?text=Jacket" alt="Jacket">
+      <h3>Winter Jacket</h3>
+      <p>$60</p>
+    </div>
+    <div class="product electronics" onclick="openModal(this)">
+      <img src="https://via.placeholder.com/250x180?text=Smartphone" alt="Smartphone">
+      <h3>Smartphone</h3>
+      <p>$350</p>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modalImg" src="" alt="">
+      <h3 id="modalTitle"></h3>
+      <p id="modalPrice"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
